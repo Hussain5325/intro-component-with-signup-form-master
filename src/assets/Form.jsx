@@ -21,7 +21,7 @@ function Form() {
   function handleClick(event) {
     event.preventDefault()
     const firstName = document.querySelector('#firstNameError')
-    const firstNameSVG = document.querySelector('#firstName')
+    const firstNameSVG = document.querySelector('.firstName')
 
     if (!FormData.firstName) {
       firstName.style.opacity = 1
@@ -32,7 +32,7 @@ function Form() {
     }
 
     const lastName = document.querySelector('#lastNameError')
-    const lastNameSVG = document.querySelector('#lastName')
+    const lastNameSVG = document.querySelector('.lastName')
 
     if (!FormData.lastName) {
       console.log('last Name is empty')
@@ -44,7 +44,7 @@ function Form() {
     }
 
     const email = document.querySelector('#emailError')
-    const emailSVG = document.querySelector('#email')
+    const emailSVG = document.querySelector('.email')
 
     if (!FormData.email) {
       console.log('email is empty')
@@ -56,7 +56,7 @@ function Form() {
     }
 
     const password = document.querySelector('#passwordError')
-    const passwordSVG = document.querySelector('#password')
+    const passwordSVG = document.querySelector('.password')
 
     if (!FormData.password) {
       console.log('password is empty')
@@ -73,8 +73,7 @@ function Form() {
       <input
         type='text'
         placeholder='First Name'
-        className='input-fields'
-        id='firstName'
+        className='input-fields firstName'
         name='firstName'
         value={FormData.firstName}
         onChange={handleChange}
@@ -85,8 +84,7 @@ function Form() {
       <input
         type='text'
         placeholder='Last Name'
-        className='input-fields'
-        id='lastName'
+        className='input-fields lastName'
         name='lastName'
         value={FormData.lastName}
         onChange={handleChange}
@@ -97,8 +95,7 @@ function Form() {
       <input
         type='email'
         placeholder='Email Address'
-        className='input-fields'
-        id='email'
+        className='input-fields email'
         name='email'
         value={FormData.email}
         onChange={handleChange}
@@ -109,8 +106,7 @@ function Form() {
       <input
         type='password'
         placeholder='Password'
-        className='input-fields'
-        id='password'
+        className='input-fields password'
         name='password'
         value={FormData.password}
         onChange={handleChange}
